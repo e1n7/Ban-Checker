@@ -322,9 +322,9 @@ document.addEventListener('click', function(event) {
     const symbolPanel = document.getElementById('symbolPanel');
     const fab = document.getElementById('fab');
     
-    if (symbolPanel.classList.contains('active')) {
+    if (symbolPanel.classList.contains('show')) {
         if (!symbolPanel.contains(event.target) && !fab.contains(event.target)) {
-            toggleSymbols();
+            toggleSymbols(); 
         }
     }
 });
