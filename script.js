@@ -318,6 +318,17 @@ function toggleSymbols() {
     }
 }
 
+document.addEventListener('click', function(event) {
+    const symbolPanel = document.getElementById('symbolPanel');
+    const fab = document.getElementById('fab');
+    
+    if (symbolPanel.classList.contains('active')) {
+        if (!symbolPanel.contains(event.target) && !fab.contains(event.target)) {
+            toggleSymbols();
+        }
+    }
+});
+
 function renderSymbols(filter = '') {
     const symbolList = document.getElementById('symbolList');
     const filtered = filter 
